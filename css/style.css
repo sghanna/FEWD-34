@@ -2,10 +2,9 @@
 
 }
 
-.body {
+body {
   background-color: #D2ECF2
 }
-
-.ul {
+ul {
     list-style-type: square;
 }
