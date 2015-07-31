@@ -1,10 +1,19 @@
-.header {
-
-}
-
-body {
-  background-color: #D2ECF2
-}
 ul {
     list-style-type: square;
+}
+body { font-family: verdana; background-color: #D2ECF2; }
+a { color: lavender; }
+header,
+footer { margin-top: 30px; text-align: center; }
+footer { margin-top: 60px; }
+img { border-radius: 650px; }
+footer { font-size: 14px; color: orange; }
+main {
+  width: 650px;
+  margin: 0 auto;
+  border: 2px solid blue;
+  padding: 2em 4em;
+  border-radius: 10px;
+  box-shadow: 0 33px 250px rgba(0, 0, 0, 0.4);
+  background-color: white;
 }
