@@ -3,7 +3,13 @@ ul {
 }
 body { font-family: verdana; background-color: #D2ECF2; }
 a { color: CornflowerBlue; }
+nav {
+  li {
+    display:inline-block;
+  }
+}
 header,
+
 footer { margin-top: 30px; text-align: center; }
 footer { margin-top: 60px; }
 img { border-radius: 650px; }
