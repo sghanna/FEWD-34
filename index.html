@@ -1,65 +1,57 @@
 <!DOCTYPE html>
 <html>
-<!--
-  1. Add the header, main, and footer
-  2. Add your name and an image placeholder
-  img ssrc="http://placehold.it/200x200"
-  3. Add a list for your homework assignments
-  4. Add a link to whales
-  5. Add a list item for ACME Corp (homework 2) (no link!)
-
--->
-<head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-
+<head> <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="icon"
       type="image/png"
       href="http://www.freesmileys.org/smileys/smiley-cool05.gif"
       href="https://fandalism.com/images/emoji/12B.png">
-<!--  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css">
--->
   <meta charset="utf-8">
   <title>&#x1f608; sghanna learns html/css/js at Genearal Assembly SF</title>
   <style media="screen">
-    header { overflow: auto; background-color: red; width: 800px;margin:auto;position:relative;}
-    /* img { float: right; } */
+    body {font-family:helvetica,arial;}
+    main, header, footer { overflow:auto; background-color:rgba(147,240,199,.6); width:90%; margin:auto; position:relative; border-radius:10px;padding:20px; box-sizing: border-box; margin-bottom:15px;}
+    footer {text-align:center}
     img { float:right }
-    h3 { float:left}
-    h1 { line-height: 200}
+    li {margin-bottom:.5em}
+    li:last-child {margin-bottom: 0}/* PSEUDO-SELECTOR */
+    li:nth-child(3) a:hover {
+      background-color:red;
+    }
+    a:hover {
+      background-color: navy;
+      color:white;
+    }
+    h1 { text-align:left; display:inline; font-weight:lighter; line-height:200px; font-size:5em; font-stretch:expanded;}
     main {
-      margin-left: auto;
-      overflow: auto;
+      border-style:solid;
+      border-width:5px;
+      border-color: rgba(147,240,199,.6);
+      padding: 15px;
+      border-radius:1em;
+      background-color:#eef;
     }
   </style>
 </head>
 <body>
-  <!-- <nav class="navbar navbar-default navbar-fixed-top">
-    <ul display="inline">
-      <li>Nav Link 1</li>
-      <li>Nav Link 2</li>
-    </ul>
-  </nav> -->
   <header>
-    <img style="border-radius:2em;" alt="sghanna code" width="200px" src="https://avatars0.githubusercontent.com/u/13477559?v=3&s=460">
-    <h3>Shawn H</h3>
+    <h1>Shawn H</h1>
+    <img style="border-radius:50%;" alt="sghanna code" width="200px" src="https://avatars0.githubusercontent.com/u/13477559?v=3&s=460">
   </header>
-</br>
-  <div class="container content">
   <main> <!-- Main will be useful as a tag to style in the CSS -->
-
     <p>Here is all my awesome homework from the <a href="https://generalassemb.ly/education/front-end-web-development">Front End Web Development class at GA</a></p>
     <p>SECRETS:
       <ul>
         <li>Command + Enter to go to a new line in Atom</li>
         <li>Type the tag then Tab to add the brackets.</li>
         <li>Fixed position is only used for nav or other weird situations</li>
-        <li>Awesome!</li>
+        <li>When Atom gives you a tool tip, click it! It will take you to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href">MDN - Mozilla Developer Network</a></li>
+        <li>More <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">PSEUDO-SELECTOR</a> stuff online at MDN</li>
       </ul>
     </p>
     <p>
       You can also view all the <a href="http://avandamiri.com/fewd-34/">homework as assigned</a>.
     </p>
-      <ul>
+    <ul>
       <li><a href="week-1/homework/">Week 1: Whales homework</a></li>
       <li><a href="week-2/homework/">Week 2: ACME corp homework</a></li>
       <li><a href="week-3/homework/">Week 3: TBD</a></li>
@@ -72,7 +64,6 @@
     </ul>
   </p>
   </main>
-  </div>
-  <footer>The footer of the page</footer>
+  <footer>&copy; The footer of the page</footer>
   </body>
   </html>
