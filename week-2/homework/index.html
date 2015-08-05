@@ -6,19 +6,41 @@
     <style media="screen">
       body {
         background-image: url("http://cloud.avandamiri.com/image/3N410e2Q2Z3F/background.png");
+        max-width: 100%;
+        margin: auto;
+        align-content: center;
       }
       header {
         background-image: none;
         background-color: #C4C4C4;
-        line-height: 80px;
-
-
+        line-height: 90px;
+        overflow: auto;
       }
-      ul li {display: inline; padding: .2em 1em; background-color: #2D4EAD; color: #fff;
-}
+      main {
+        max-width: 70%;
+        padding: 1em;
+        border-radius: 8px;
+        background-color: white;
+        overflow: auto;
+        position: relative;
+        box-shadow: 8px;
+      }
+      ul li {
+        display: inline;
+        padding: 0;
+        background-color: #2D4EAD;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      img {
+        float:left;
+      }
     </style>
   </head>
-  <body max-width="80">
+  <center>
+  <body>
     <header>
       <img src="http://cloud.avandamiri.com/image/423B1n2p2v0U/acme-corp.jpg" alt="ACME corp" />
       <ul>
@@ -26,6 +48,12 @@
         <li><button type="button" name="Sign Up">Sign Up</button></li>
       </ul>
     </header>
-    ACME corp will go here, hold your britches.
+    <main>
+      <h1>Welcome to ACME Corp!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </main>
+
   </body>
+</center>
 </html>
