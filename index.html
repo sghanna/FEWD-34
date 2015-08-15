@@ -11,17 +11,23 @@
     body {font-family:helvetica,arial;background:black;max-width: 1000px;}
     main, header, footer { overflow:auto; background-color:rgba(147,240,199,.7); width:98%; margin:auto; position:relative; border-radius:10px;padding:20px; box-sizing: border-box; margin-bottom:15px;}
     footer {text-align:center}
-    ul {padding-left: 2em}
+    ul {padding:0px}
     li {margin-bottom:.5em}
     li:last-child {margin-bottom: 0}/* PSEUDO-SELECTOR */
     li:nth-child(3) a:hover {background-color:red;}
     li.homework{
       float:left;
       display:inline;
+      border-radius:10px;
+      padding-left:.0em;
       width:50%;
     }
     li.homework:nth-child(even) {
-      background-color: red;
+      background-color: rgba(147,240,199,.3);
+
+    }
+    li.homework:nth-child(odd) {
+      background-color: rgba(147,240,199,.7);
     }
     .logo {border-radius:50%;float:right;}
     a:hover {
@@ -32,7 +38,7 @@
     main {
       border-style:solid;
       border-width:5px;
-      border-color: rgba(147,240,199,.4);
+      border-color: rgba(122,122,122,.7);
       padding: 15px;
       background-color:#eef;
     }
@@ -41,9 +47,9 @@
     }
     @media (max-width: 610px) {
       .logo {display:none;}
-      main, header, footer {width:100%;border-radius:0px;}
+      main, header, footer {width:100%;border-radius:0px;border:0px;}
       body {margin:auto;}
-      h1 {font-size:4em;line-height: 150px}
+      h1 {font-size:4em;line-height: 100px}
     }
     @media (max-width: 450px) {
       ul{padding-left:0px;}
