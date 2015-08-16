@@ -5,24 +5,31 @@
     <title>&copy; Week 2 - ACME corp - FEWD 34 - sghanna</title>
     <style media="screen">
       body {
-        background-image: url("http://cloud.avandamiri.com/image/3N410e2Q2Z3F/background.png");
+        background-image: url("images/background.png");
         max-width: 100%;
         margin: auto;
         align-content: center;
+        text-align: center;
       }
       header {
         background-image: none;
-        background-color: #C4C4C4;
-        line-height: 90px;
+        background-color: #C4c4c4;
+        line-height: 50px;
         overflow: auto;
         box-shadow: 0px 1px black;
+        text-align:right;
+        padding:10px 20px;
       }
       footer {
         max-width: 70%;
         box-shadow: 0px 1px black;
+        margin: auto;
         margin-top: 20px;
         box-sizing: border-box;
+        align-content: center;
+        text-align:center;
       }
+
       main {
         max-width: 70%;
         padding: 1em;
@@ -31,31 +38,45 @@
         overflow: auto;
         position: relative;
         box-shadow: 8px 8px 8px black;
-        margin-top: 20px;
+        margin: auto;
+        margin-top:20px;
         box-sizing: border-box;
+        align-content: center;
       }
-      ul.navi li {
-        display: inline-block;
-        padding: 10px;
-        /* background-color: #2D4EAD; */
-        color: #fff;
-        position: relative;
-        top: 0;
-        right: 0; */
+      nav a {
+        text-decoration: none;
+        background: #c4c4c4;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 20px;
+        font-family: "lucidia sans", "Demibold Roman", sans-serif;
+        text-shadow: 1px 1px 2px black;
       }
+      nav a:last-child {background-color:#2D4EAD;}
+
       img.logo {
         float:left;
+        height:60px;
+      }
+      @media (max-width: 630px) {
+        nav {display:inline-block;font-size:.9em;}
+        nav a {padding: 5px 10px;}
+        header {padding:5px;}
+      }
+      @media (max-width: 515px) {
+        nav {line-break: loose;}
+        header {text-align:left;padding:0px; margin:auto;}
       }
     </style>
   </head>
-  <center>
   <body>
     <header>
       <img class="logo" src="images/acme-corp.jpg" alt="ACME corp" />
-      <ul class="navi">
-        <li><a href="products.html">Products</li></a>
-        <li><button type="button" name="Sign Up">Sign Up</button></li>
-      </ul>
+      <nav>
+        <a href="acme.html">About Acme corp</a>
+        <a href="products.html">Products</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
     </header>
     <main>
       <h1>Welcome to ACME Corp!</h1>
@@ -63,7 +84,8 @@
       <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </main>
     <footer>
-    <hr>
+      <center>
+    <p>&copy; 2015</p>
     </footer>
   </body>
 </center>
