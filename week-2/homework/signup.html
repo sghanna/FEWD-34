@@ -2,41 +2,40 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>&#128566; week 3 Products</title>
-    <style media="screen">
-      img:hover {
-        
-      }
-      .product-image {
-        dispay: inline-block;
-      }
-      ul {
-      }
-      li {
-        list-style-type: none;
-        display:inline-block;
-      }
-      body {
-        background-image: url("http://cloud.avandamiri.com/image/3N410e2Q2Z3F/background.png");
-        max-width: 70%;
-        margin: auto;
-        align-content: center;
-      }
-    </style>
+    <title>&copy; Week 3 | ACME corp | sign-up</title>
+    <link rel="stylesheet" href="acme-style.css" media="screen">
   </head>
   <body>
-    <h1>Products</h1>
-    <p>For a complete list of products, please visit The Original Illustrated Catalog of ACME Products.</p>
-    <ul>
-      <img class="product-image" src="images/blasting.jpg">
-      <li>Due to its highly volatile and explosive nature, do not ignite ACME Blasting Powder until you are in a safe location.</li>
-      <p>Details</p><p>Add to Cart</p>
-      <img class="product-image" src="images/hair.jpg">
-      <li>ACME Hair Grower (patented) is guaranted to make short hair long in a flash.</li>
-      <p>Details</p><p>Add to Cart</p>
-      <img class="product-image" src="images/jetuni.jpg">
-      <li>Another item in the ACME Jet Propelled Line of products is the ACME Jet Propelled Unicycle, which even the most unbalanced individual can ride with ease.</li>
-      <p>Details</p><p>Add to Cart</p>
+    <header>
+      <img class="logo" src="images/acme-corp.jpg" alt="ACME corp" />
+      <nav>
+        <a href="acme.html">About Acme corp</a>
+        <a href="products.html">Products</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+    </header>
+    <main>
+    <h2>Sign up</h2>
+    <p>
+    <form action="" method="post">
+      <fieldset>
+      <li class="form-input"><label for="firstname">First Name</label><input type="text" name="firstname" value="" placeholder="FirstName" required></li>
+      <li class="form-input"><label for="lastname">Last Name</label><input type="text" name="lastname" value="" placeholder="LastName" required></li>
+      <li class="form-input"><label for="email">Email</label><input type="email" name="email" value="" placeholder="you@email.com" required></li>
+      <li class="form-input"><label for="password">Password</label><input type="password" name="password" value="" placeholder="" required></li>
+      <li class="form-input"><input type="checkbox" name="tos" value="" placeholder="" required><label for="tos">Agree to our terms of service</label></li>
+      <li class="form-input"><input type="button" name="submit" value="Sign up"></li>
+      </fieldset>
+    </form>
+
+
+
     </p>
+  </main>
+    <footer>
+      <center>
+        <hr>
+        <p>&copy; Copyright, 2015</p>
+    </footer>
   </body>
 </html>
