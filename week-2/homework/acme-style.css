@@ -50,27 +50,39 @@ nav a {
 nav a:last-child {background-color:#2D4EAD;}
 input:invalid {border: 1px solid red;}
 input:valid {border: 1px solid green;}
-fieldset {
-  margin:auto;
-  border:none;
-  padding:0px;
-}
 li.form-input {
   list-style-type: none;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  display:flex;
 }
 img.logo {
   float:left;
   height:60px;
 }
+.product {
+  display:flex;
+}
 .product-image{
-  align-content: left;
-  display: inline-block;
-  float:left;
+  flex-basis:90%;
 }
 .product-text{
-  align-content: right;
-  display: inline-block;
+  flex-grow:1;
+  padding: 0px 20px;
+}
+.product-button {
+  color:blue;
+  border: 1px solid blue;
+  text-decoration: none;
+  border-radius:.5em;
+  padding: 10px 20px;
+  margin-left:10px;width:
+}
+.product-button:nth-child(even) {
+  background-color: blue;
+  color:white;
+}
+.flex-label {
+  flex-basis:15%;
 }
 @media (max-width: 630px) {
   nav {display:inline-block;}
