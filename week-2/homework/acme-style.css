@@ -75,11 +75,14 @@ img.logo {
   text-decoration: none;
   border-radius:.5em;
   padding: 10px 20px;
-  margin-left:10px;width:
+  margin:10px;
 }
 .product-button:nth-child(even) {
   background-color: blue;
   color:white;
+}
+.product-button:hover {
+  background-color: rgba(0, 0, 255, 0.5);;
 }
 .flex-label {
   flex-basis:15%;
