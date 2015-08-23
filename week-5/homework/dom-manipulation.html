@@ -3,6 +3,7 @@ body { font-family: sans-serif; }
 .set { border: 1px solid #ccc; padding: 0 2em; border-radius: 5px; margin-bottom: 2em; }
 #image { border: 5px dotted #ccc; border-radius: 10px; padding: 10px; margin-bottom: 1em; }
 .bold { font-weight: bold; }
+img {border-radius:10px; margin-right:10px; margin-bottom:10px;}
 </style>
 
 <div class="set">
@@ -58,25 +59,41 @@ body { font-family: sans-serif; }
   </p>
 
   <p>
-    <button onclick="addImage()">+ Add image</button>
+    <button onclick="addImage()" title="This is the hard coded version for testing">+ Add image</button>
+    <button onclick="addImageQS()" title="This is the homework version">+ Prompt for image</button>
+    <button onclick="addImageTop()" title="This is the bonus version">+ Add image to top</button>
   </p>
-  <script>
-    var elem = document.createElement("img");
-    elem.setAttribute("src", "http://placekitten.com/200/301");
-    //elem.setAttribute("height", "768");
-    //elem.setAttribute("width", "1024");
-    //elem.setAttribute("alt", "Flower");
-    document.getElementById("image").appendChild(elem);
-  </script>
 
   <div id="image">
   </div>
 
   <script>
-  function addImage() {
-    document.getElementById("image").appendChild(elem);
+  function addImage() { //This is the hard coded version for testing
+    var kitten = document.createElement("img");
+    kitten.setAttribute("src", "http://placekitten.com/200/301");
+    document.getElementById("image").appendChild(kitten);
   }
   </script>
+
+  <script>
+  function addImageQS() { //This version uses querySelector instead of getElementById
+    imageURL = prompt("Enter image URL");
+    var kitten = document.createElement("img");
+    kitten.setAttribute("src", imageURL);
+    document.querySelector("#image").appendChild(kitten);
+  }
+  </script>
+
+  <script>
+  function addImageTop() { //This version adds new images to the top instead of the bottom
+    imageURL = prompt("Enter image URL");
+    var kitten = document.createElement("img");
+    kitten.setAttribute("src", imageURL);
+    var elem = document.getElementById("image")
+    elem.insertBefore(kitten, elem.firstChild);
+  }
+  </script>
+
 </div>
 
 <div class="set">
@@ -102,5 +119,5 @@ body { font-family: sans-serif; }
   <p>
     <button onclick="makeBold()">Make bold</button>
   </p>
-
+<p><font color="white">http://placekitten.com/200/301</p>
 </div>
