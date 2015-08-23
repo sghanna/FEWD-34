@@ -108,6 +108,9 @@ img {border-radius:10px; margin-right:10px; margin-bottom:10px;}
 
     // Your code goes here.
   }
+  function makeBoldToggle() {
+    document.getElementById("make-me-bold").classList.toggle("bold");
+  }
   </script>
 
   <p id="make-me-bold">
@@ -118,6 +121,7 @@ img {border-radius:10px; margin-right:10px; margin-bottom:10px;}
 
   <p>
     <button onclick="makeBold()">Make bold</button>
+    <button onclick="makeBoldToggle()">Make bold toggle</button>
   </p>
 <p><font color="white">http://placekitten.com/200/301</p>
 </div>
