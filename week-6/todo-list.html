@@ -1,0 +1,31 @@
+<form id="new-todo-item-form">
+  <input type="text" id="new-todo-item-input" placeholder="What do you need to do?">
+  <button type="submit">Create todo</button>
+</form>
+
+<hr>
+
+<ul id="todo-list">
+</ul>
+
+<script>
+// Your code goes here.
+var b = document.querySelector("button");
+b.addEventListener("click",addLi);
+var parentUL = document.querySelector("#todo-list");
+
+function addLi(event) {
+  event.preventDefault();
+  var inputLi = document.querySelector("#new-todo-item-input").value;
+  var newLi = document.createElement("li");
+  newLi.textContent = inputLi;
+  parentUL.appendChild(inputLi);
+}
+
+</script>
+
+<style>
+#new-todo-item-input {
+  width: 200px;
+}
+</style>

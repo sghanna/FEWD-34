@@ -68,12 +68,24 @@ img {border-radius:10px; margin-right:10px; margin-bottom:10px;}
   </div>
 
   <script>
-  function addImage() { //This is the hard coded version for testing
+  function addImages() { //This is the hard coded version for testing
     var kitten = document.createElement("img");
     kitten.setAttribute("src", "http://placekitten.com/200/301");
     document.getElementById("image").appendChild(kitten);
   }
   </script>
+<script>
+  function addImage() {
+    var text = prompt("What's the URL?");
+    var width = prompt("What should the width be?");
+    var height = prompt("What should the height be?");
+    var img = document.createElement("img");
+    img.setAttribute("src", text);
+    img.setAttribute("width", width);
+    img.setAttribute("height", height);
+    document.querySelector("#image").appendChild(img);
+  };
+</script>
 
   <script>
   function addImageQS() { //This version uses querySelector instead of getElementById
