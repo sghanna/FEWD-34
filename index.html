@@ -9,7 +9,7 @@
   <title>&#x1f608; sghanna learns html/css/js at Genearal Assembly SF</title>
   <style media="screen">
     body {font-family:helvetica,arial;background:black;max-width: 1000px;margin-left:auto;margin-right:auto;margin-top:15px;}
-    main, header, footer { overflow:auto; background-color:rgba(147,240,199,.7); width:97%; margin:auto; position:relative; border-radius:10px;padding:20px; box-sizing: border-box; margin-bottom:15px;}
+    main, header, footer, aside { overflow:auto; background-color:rgba(147,240,199,.7); width:97%; margin:auto; position:relative; border-radius:10px;padding:20px; box-sizing: border-box; margin-bottom:15px;}
     footer {text-align:center}
     ul {padding:0px}
     li {margin-bottom:.5em}
@@ -20,7 +20,6 @@
     li:nth-child(3) a:hover {background-color:green;}
     li:nth-child(5) a:hover {background-color:green;}
     li:nth-child(6) a:hover {background-color:red;}
-
 
     li.homework{
       float:left;
@@ -42,7 +41,10 @@
       color:white;
     }
     h1 { text-align:left; display:inline; font-weight:lighter; line-height:200px; font-size:5em; font-stretch:expanded;}
-    main {
+    h2 { text-align:left; display:inline; font-weight:lighter; line-height:1.3em; font-size:3em; font-stretch:expanded;}
+    p {line-height: 1.5em;}
+    #final {font-size: 1.3em;}
+    main, aside {
       border-style:solid;
       border-width:5px;
       border-color: rgba(122,122,122,.7);
@@ -80,12 +82,17 @@
       <li class="homework">Week 3 homework: <a href="week-2/homework/products.html">Products page - not bad, could be better, css stuff</a> & <a href="week-2/homework/signup.html">Sign-up form</a></li>
       <li class="homework">Week 4 homework: <a href="week-4/homework/calc.html">Geometric Calculator - didn't do this one, just copied the solution</li></a>
       <li class="homework">Week 5 homework: <a href="week-5/homework/dom-manipulation.html">Dom manipulation - i crushed this one</li></a>
-      <!-- <li class="homework">Week 6 homework: <a href="week-6/homework/">TBD calculator that i didn't actually accomplish or attempt</li></a> -->
-      <li class="homework">Week 7 homework: <a href="week-7/homework/movies.html">movies not done yet - not even started</li></a>
-      <li class="homework">Week 8 homework: <a href="week-8/homework/">TBD</li></a>
+      <li class="homework">Week 6 homework: to do list - not attempted</li>
+      <li class="homework">Week 7 homework: movies - not attempted</li>
+      <li class="homework">Week 8 homework: spreadsheet - not attempted</li>
     </ul>
   </p>
   </main>
+  <aside>
+    <h2>Final Project:</h2>
+    <p id="final"><a href="final-project/">Image Pickr</a>: is a javascript app that enables the user to earch for tagged images on Instagram.</p>
+    <p>Resources that helped with this project are <a href="http://jsfiddle.net/cfleschhut/3ERAT/">jsFiddle Instagram image search example</a> and <a href="http://jelled.com/instagram/access-token">how to get your Instagram access token</a>. Note: That access token piece seems risky.</p>
+  </aside>
   <footer>&copy; The footer of the page</footer>
   </body>
   </html>
