@@ -111,8 +111,8 @@
       //alert(document.querySelector("#tag").value);
       var tag = document.querySelector("#tag").value;
       var instagramUrl = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?count=5' + instagramToken;
-      //get(instagramUrl, dataForEach);
-      $.get(instagramUrl, resultsReturned);
+      get(instagramUrl, resultsReturned); //Avand version
+      //$.get(instagramUrl, resultsReturned); //jQuery version
     }
 
     // for each loop
