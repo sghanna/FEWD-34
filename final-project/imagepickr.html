@@ -90,6 +90,7 @@
 
     <script>
     //clientID token to access Instagram
+  /*  COMMENTING OUT MY CODE TO TRY PASSING TOKEN AS AN OBJECT
     var instagramToken = "&client_id=144a084754754ee393eafd7814c787d6";
     //get function, could use jQuery instead
     function get(url, success) {
@@ -114,6 +115,27 @@
       get(instagramUrl, resultsReturned); //Avand version
       //$.get(instagramUrl, resultsReturned); //jQuery version
     }
+    */
+    var access_token = "2205178294.324cf62.a569c4db3a394908bfa806cfafae2397",
+        access_parameters = {
+            access_token: access_token
+        };
+
+    var form = $('#tagsearch');
+    form.on('submit', function(ev) {
+        var q = this.tag.value;
+        if(q.length) {
+            //console.log(q);
+            grabImages(q, 5, access_parameters);
+        }
+        ev.preventDefault();
+    });
+
+    function grabImages(tag, count, access_parameters) {
+        var instagramUrl = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?callback=?&count=' + count;
+        $.getJSON(instagramUrl, access_parameters, resultsReturned);
+    }
+    //end jsfiddle code example
 
     // for each loop
     function resultsReturned(instagramObject) {
@@ -128,7 +150,7 @@
       target.appendChild(img);
     }
 
-    grabImages('kitten', 4, instagramToken);
+    grabImages('kitten', 4, access_parameters);
 
     </script>
   </body>
