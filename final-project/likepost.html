@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Like Post</title>
+
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #f1f0f5;
+        font-family: sans-serif;
+        font-size: 18px;
+        line-height: 1.4em;
+      }
+      main {
+        margin: 2em auto;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+        background: white;
+        padding: 2em 3em;
+        max-width: 600px;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      article {
+        padding-bottom: 1em;
+        margin-bottom: 2em;
+        border-bottom: 1px solid #ccc;
+      }
+      textarea {
+        display: block;
+        width: 100%;
+      }
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #049cd8;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      textarea,
+      .comment {
+        border: 1px solid #ccc;
+        padding: .5em 1em;
+        margin: 1em 0;
+        border-radius: 5px;
+      }
+      textarea {
+        font-size: inherit;
+      }
+      button {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom-width: 2px;
+        border-radius: 5px; font-size: inherit;
+        color: white;
+        background-color: #049cd8;
+        padding: .5em 1em;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h3>Post data to a web server</h3>
+        <p>The purpose of this page is to save the likes to a server. If I close the browser or someone else goes to this page they should see how many likes are left.</p>
+        <p>Bonus: Save the comment and some info about the user</p>
+      </article>
+
+      <div class="like">
+        <a href="#" class="like-link">Like</a>
+        (<span class="like-count">0</span>)
+      </div>
+
+      <div id="comments">
+        <!--
+        <div class="comment">
+          You're looking good!
+        </div>
+        -->
+      </div>
+
+// FIGURE OUT $.POST TO SEND THIS DATA TO GOOGLE
+
+      <form action="https://docs.google.com/forms/d/1dTgviXZH-uperlj5wNV57AhyDPHUnaS42isF1Zawsd4/formResponse?embedded=true" method="POST" id="ss-form" target="_self" onsubmit="">
+      <ol role="list" class="ss-question-list" style="padding-left: 0">
+        <label class="ss-q-item-label" for="entry_1305751528">LikeCount</label>
+        <input type="text" name="entry.1305751528" value="" class="ss-q-short" id="entry_1305751528" dir="auto" aria-label="LikeCount  " title="">
+        <!--
+        <label class="ss-q-item-label" for="entry_376633590">CommentText</label>
+        <input type="text" name="entry.376633590" value="" class="ss-q-short" id="entry_376633590" dir="auto" aria-label="CommentText  " title="">
+        -->
+        <input type="hidden" name="draftResponse" value="[,,&quot;-2177384740492578425&quot;]">
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fvv" value="0">
+        <input type="hidden" name="fbzx" value="-2177384740492578425">
+        <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action ">
+      </ol>
+      </form>
+    </main>
+
+    <script>
+      var likeLink = document.querySelector(".like-link");
+      var likeCount = document.querySelector(".like-count");
+
+      var commentForm = document.querySelector("#new-comment");
+      var commentBody = document.querySelector("#new-comment-body");
+      var comments = document.querySelector("#comments");
+
+      function like(event) {
+        event.preventDefault();
+
+        var count = parseInt(likeCount.textContent)
+        likeCount.textContent = count + 1;
+
+        var googleLike = document.getElementById("entry_1305751528")
+        googleLike.value = likeCount.textContent;
+      }
+
+      function createComment(event) {
+        event.preventDefault();
+
+        if (commentBody.value.length > 0) {
+          var comment = document.createElement("div");
+          comment.setAttribute("class", "comment");
+          comment.textContent = commentBody.value;
+          comments.appendChild(comment);
+          commentForm.reset();
+        }
+      };
+
+      likeLink.addEventListener("click", like);
+      commentForm.addEventListener("submit", createComment);
+    </script>
+  </body>
+</html>
